@@ -40,7 +40,7 @@ namespace ComPortTest
 
             display = new CharacterDisplay(bus, 39, 2, 16);
 
-            port = Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, suffixDelimiter: new byte[] { 10 }, preserveDelimiter: true, 1000000, 8, Parity.None, StopBits.One);
+            port = Device.CreateSerialMessagePort(Device.SerialPortNames.Com4, suffixDelimiter: new byte[] { 10 }, preserveDelimiter: true, 921600, 8, Parity.None, StopBits.One);
             port.Open();
             port.MessageReceived += Port_MessageReceived;
         }

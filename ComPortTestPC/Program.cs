@@ -12,7 +12,7 @@ namespace ComPortTestPC
         static SerialPort port;
         static void Main(string[] args)
         {
-            port = new SerialPort("COM4", 1000000, Parity.None, 8, StopBits.One);
+            port = new SerialPort("COM4", 921600, Parity.None, 8, StopBits.One);
             port.Open();
             while (true)
             {
